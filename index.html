@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><img src="images/exeslogo.jpeg"></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		html body{
+			width: 100%;
+			height: auto;
+			font-family: Calibri;
+		}
+		.container{
+			width: 80%;
+			margin: 0px auto;
+			//overflow-x: hidden;
+		}
+		.container2{
+			position: relative;
+			width: 100%;
+			overflow-x: hidden;
+		}
+		header{
+			padding: 1%;
+			background: #f4f4f4;
+			//width: 100%;
+			color: #999999;
+		}
+		header img{
+			max-width: 40%;
+			//height: 1%;
+		}
+		#header_conatainer{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		header ul li{
+			text-decoration: none;
+			//display: inline-block;
+			float: left;
+			padding: 2%;
+		}
+		header a:link{
+			text-decoration: none;
+			color: #999999;
+			padding: .2em;
+		}
+		header a:visited{
+			text-decoration: none;
+			color: #7a7979;
+			padding: .2em;
+		}
+		header a:hover{
+			padding-top: 2em;
+			color: white;
+			padding: .2em;
+			border-radius: 3px;
+			background: #ff6666;
+		}
+		header button{
+				display: none;
+			}
+		ul li ul li{
+			display: none;
+		}
+		//ul li:hover  ul li{
+			display: block;
+		}
+		#menu_bttn{
+			background: #ff6666;
+			padding: .5em 10em;
+			border: none;
+			border-radius: 3px;
+			border: 1px solid #f86e6e;
+			cursor: pointer;
+			color: white;
+		}
+		#slider{
+			position: relative;
+			width: 300%;
+			//display: grid;
+			//grid-template-columns: 100% 100% 100%;
+			animation: myframe 10s linear .5s infinite;
+
+		}
+		.slide{
+			position: relative;
+			width: 33.3%;
+			float: left;
+			//height: 450px;
+			background-size: cover;
+		}
+		.slide:nth-child(1){
+			background: url("images/Picture1.jpg");
+		}
+		.slide:nth-child(2){
+			background: url("images/Picture2.jpg");
+		}
+		.slide:nth-child(3){
+			background: url("images/Picture3.jpg");
+		}
+		section{
+			width: 100%;
+			height: 400px;
+			//text-align: center;
+			//background: url("images/Picture1.jpg");
+			background-position: center;
+			background-size: cover;
+			//animation: myframe 10s linear 4s infinite;
+		}
+
+		@keyframes myframe{
+			0%{
+				left: 0;
+			}
+			16.7%{
+				left: 0;
+			}
+			33.4%{
+				left: -100%;
+			}
+			50%{
+				left: -100%;
+			}
+			66.7%{
+				left: -200%;
+			}
+			83.4%{
+				left: -200%;
+			}
+			100%{
+				left: 0;
+			}
+		}
+
+		//section img{
+			max-width: 100%;
+			//height: 25em;
+			position: relative;
+			//clip: rect( 0px, 100em, 300px, 0px);
+		}
+		#section_message{
+			//position: absolute;
+			top: 50%;
+			color: white;
+			font-size: 2vw;
+			position: 1%;
+			background: rgba(30, 30, 30, .5);
+			border-radius: 3px;
+			width: 18%;
+		}
+		#section_message h1{
+			padding: 1%;
+		}
+		#section_para{
+			width: 30%;
+			background:  rgba(250, 250, 250, .8);
+			padding: 1%;
+			border-radius: 5px;
+			color: #333333;
+		}
+		.short_message{
+			width: 75%;
+			margin: 5% auto;
+		}
+		aside{
+			padding: 2.5em;
+			text-align: center;
+			//line-height: 2em;
+			border-bottom: 1px solid #f1ecec;
+			//display: none;
+			//background: #f4f4f4;
+		}
+		.hidden{
+			//display: none;
+		}
+		aside h1{
+			font-size: 2vw;
+			color: #333333;
+		}
+		aside p{
+			font-size: 1.5vw;
+			color: #999999;
+			text-align: left;
+		}
+
+		div span{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 2em;
+			//border-bottom: 1px solid #f1ecec;
+		}
+		//.first_layer{
+			width: 70%;
+			margin: 0px auto;
+		}
+		span h3{
+			text-align: center;
+			font-size: 2vw;
+			color: #333333;
+		}
+		span div{
+			padding: 2em;
+		}
+		span p{
+			color: #999999;
+			font-size: 1.5vw;
+		}
+		footer div{
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+		}
+		footer{
+			background: #666666;
+			padding: 2em;
+			color: white;
+			font-size: 1.2vw;
+		}
+		#clients{
+			text-align: center;
+			background: #f5f5f5;
+			padding: 1em;
+			color: #333333;
+			font-size: 2vw;
+		}
+		#clients_backgroud{
+			padding: 1em;
+			background: #f5f5f5;
+		}
+		@media screen and (max-width:800px){
+			#section_para{
+				width: 60%;
+			}
+			#section_message{
+				font-size: 4vw;
+				width: 35%;
+			}
+			#header_conatainer{
+				display: grid;
+				grid-template-columns: 2fr 1fr ;
+			}
+			header{
+				margin-bottom: 3em;
+			}
+			//header li{
+				display: none;
+			}
+			//header button{
+				display: block;
+				float: right;
+				margin-top: 1em;
+			}
+			header img{
+
+			}
+			aside h1{
+				font-size: 4vw;
+				color: #333333;
+			}
+			aside p{
+				font-size: 3.5vw;
+			}
+			div span{
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: 2em;
+			}
+			span h3{
+				font-size: 4vw;
+			}
+			span p{
+				font-size: 3.5vw;
+			}
+			#clients{
+				font-size: 4vw;
+			}
+			footer{
+				font-size: 3.5vw;
+			}
+			#menu_bttn{
+				margin-bottom: 2em;
+			}
+			header a:hover{
+			//padding-top: 2em;
+			color: #ff6666;
+			//padding: .2em;
+			//border-radius: 3px;
+			//background: #ff6666;
+		}
+		}
+
+	</style>
+</head>
+<body>
+
+<header>
+		<div class="container">
+			<div id = header_conatainer>
+				<img src="images/exeslogo3.jpg">
+
+				<ul style="list-style-type: none">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">What we do</a></li>
+					<li><a href="#">location</a>
+						<ul class = "sub_nav">
+							<li><a href="#">Uno</a></li>
+							<li><a href="#">Dos</a></li>
+							<li><a href="#">Dres</a></li>
+							<li><a href="#">Four</a></li>
+						</ul>
+					</li>
+
+
+						<li id = "special_li"><a href="#">Service</a>
+						<ul class = "sub_nav">
+							<li><a href="#">Uno</a></li>
+							<li><a href="#">Dos</a></li>
+							<li><a href="#">Dres</a></li>
+							<li><a href="#">Four</a></li>
+						</ul>
+					</li>
+				</ul><br>
+			</div>
+			<button id = "menu_bttn">Menu</button>
+		</div>
+</header>
+
+
+	<!--<img src="images/pexels-photo-669615.jpeg">-->
+		<div class="container2">
+			<div id = "slider">
+				<div class="slide">
+					<section>
+						<div class = "short_message">
+							<div id = "section_message"><h1>Our Vision</h1></div><br><br>
+							<div id = "section_para"><p>To become the preferred service provider of Special Engineered Equipment in the local and global markets which we serve and to outperform our competitors in all sectors.</p></div>
+						</div>
+					</section>
+				</div>
+
+				<div class="slide">
+					<section>
+						<div class = "short_message">
+							<div id = "section_message"><h1>Our Mission</h1></div><br><br>
+							<div id = "section_para"><p>To be chosen by our customers as the market leader in providing engineered solutions in the Automotive and Automation, Munitions Equipment, Extrusion Components, Human Capital Development and Energy and Water Resource Sector. </p></div>
+						</div>
+					</section>
+				</div>
+
+				<div class="slide">
+					<section>
+						<div class = "short_message">
+							<div id = "section_message"><h1>Our Values</h1></div><br><br>
+							<div id = "section_para"><p><ul><li>Passion and Commitment</li><li>Integrity</li><li>Customer Focus</li><li>Teamwork</li></ul></p></div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+
+<aside class = "hidden">
+		<div class="container">
+			<h1>Exes Global</h1><br>
+			<p>Please suggest a message that shortly discribes the compony and what it does. Please suggest a message that shortly discribes the compony and what it does. Please suggest a message that shortly discribes the compony and what it does. Please suggest a message that shortly discribes the compony and what it does. Please suggest a message that shortly discribes the compony and what it does.</p>
+		</div>
+</aside>
+
+
+<div class="container">
+	<span class = "first_layer">
+				<div>
+					<h3>Manufacturer and Repairs </h3><br>
+					<p>is heavily involved in the field of autoclave manufacturing, producing cutting edge new steam autoclaves but we also upgrade, refurbish and rebuild existing old and out-dated autoclaves enabling their continued use in today’s demanding conditions in various industries dependent on unbroken service from such products to maximise productivity rates and keep down time to a minimum.</p>
+				</div>
+
+				<div>
+					<h3>Exes Industrial Suppliers</h3><br>
+					<p>an industry leading distributer of track tools, work equipments, shop tools and related items. Our goal is to provide secure, high quality, cost effective solutions, first-class customer service. Our team is determined to meet all our customers’ needs by providing suitable products and applications.
+</p>
+				</div>
+
+				<div>
+					<h3>Smartgrid Meter System</h3><br>
+					<p>Smartgrid Meter System designed its product portfolio to create an improved service offering for utilities and customers. Open architecture allows integration of either new or existing systems and can also include those of third-party vendors. This product and service offering for utilities, service providers and end customers fits into three solution sets.</p>
+				</div>
+
+	</span>
+</div>
+
+<div id = "clients_backgroud">
+<div class="container">
+	<div id = "clients">
+	<h3>Our Clients</h3><br><br>
+	<img src="images/Picture2.png" height="70">
+	<img src="images/Picture3.png" height="70">
+	<img src="images/Picture4.png" height="70">
+	<img src="images/Picture5.png" height="70">
+	<img src="images/Picture6.png" height="70">
+	<img src="images/Picture7.png" height="70">
+	<img src="images/Picture8.png" height="70">
+	<img src="images/Picture9.png" height="70">
+	<img src="images/Picture10.png" height="70">
+	<img src="images/Picture11.png" height="70">
+	<img src="images/Picture12.png" height="50">
+	<img src="images/Picture13.png" height="70">
+	<img src="images/Picture14.png" height="70">
+	<!--<img src="images/Picture15.png" height="70">-->
+	<img src="images/Picture16.png" height="70">
+	<img src="images/Picture17.png" height="70">
+	<img src="images/Picture18.png" height="70">
+	</div>
+</div>
+</div>
+
+<footer>
+	<div class="container">
+		<p>Copyright &copy; 2018 Exes Global. services. Contact</p>
+		<p id = "developer"><di style = "color: #aaaaaa;">Web developed by</di> Lwazi: lwazi4787@gmail.com</p>
+	</div>
+</footer>
+
+
+<script type="text/javascript" src = "jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	(function(){
+		var offsetVr = $("aside").offset().top/2;
+
+		$(document).ready(function(){
+		$('#menu_bttn').click(function(){
+			$('header li').slideToggle(500);
+		});
+		$(document).on("scroll", function(){
+			if($(document).scrollTop() > offsetVr && $("aside").hasClass("hidden"))
+				$("aside").removeClass("hidden");
+		});
+	});
+});
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#somthing{
+			//display: grid;
+			//grid-template-columns: 100% 100% 100% 100%;
+			position: relative;
+			width: 450%;
+			//float: left;
+			//animation: frame 2s linear infinite;
+		}
+		#somthing_else{
+			position: relative;
+			width: 100%;
+			overflow-x: hidden;
+		}
+		h1{
+			background-size: cover;
+		}
+		h1{
+			//margin: 20% auto;
+			width: 20%;
+			position: relative;
+			float: left;
+		}
+		h1:nth-child(1)
+		{
+			background: url("images/Picture1.jpg");
+		}
+		h1:nth-child(2)
+		{
+			background: url("images/Picture2.jpg");
+		}
+		h1:nth-child(3)
+		{
+			background: url("images/Picture3.jpg");
+		}
+		h1:nth-child(4)
+		{
+			background: url("images/Picture4.jpg");
+		}
+		@keyframes frame{
+			0%{
+				left: 0;
+			}
+			25%{
+				left: 0;
+			}
+			50%{
+				left: -100%;
+			}
+		}
+	</style>
+</head>
+<body>
+<div id = "somthing_else">
+	<div id = "somthing">
+		<h1>Somthing1</h1>
+		<h1>Somthing2</h1>
+		<h1>Somthing3</h1>
+		<h1>Somthing4</h1>
+	</div>
+</div>
+</body>
+</html>
